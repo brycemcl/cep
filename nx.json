@@ -16,9 +16,13 @@
   },
   "tasksRunnerOptions": {
     "default": {
-      "runner": "@nrwl/workspace/tasks-runners/default",
+      "runner": "nx-remotecache-minio",
       "options": {
-        "cacheableOperations": ["build", "lint", "test", "e2e"]
+        "url": "https://s3.us-west-001.backblazeb2.com",
+        "bucket": "cep-nx-remotecache",
+        "region": "us-west-1",
+        "verbose": true,
+        "cacheableOperations": ["build", "test", "lint", "e2e"]
       }
     }
   },
