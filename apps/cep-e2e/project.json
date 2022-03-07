@@ -1,0 +1,28 @@
+{
+  "root": "apps/cep-e2e",
+  "sourceRoot": "apps/cep-e2e/src",
+  "projectType": "application",
+  "targets": {
+    "e2e": {
+      "executor": "@nrwl/cypress:cypress",
+      "options": {
+        "cypressConfig": "apps/cep-e2e/cypress.json",
+        "devServerTarget": "cep:serve:development"
+      },
+      "configurations": {
+        "production": {
+          "devServerTarget": "cep:serve:production"
+        }
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["apps/cep-e2e/**/*.{js,ts}"]
+      }
+    }
+  },
+  "tags": [],
+  "implicitDependencies": ["cep"]
+}

@@ -1,0 +1,9 @@
+{
+  "version": 2,
+  "projects": {
+    "api": "apps/api",
+    "api-interfaces": "libs/api-interfaces",
+    "cep": "apps/cep",
+    "cep-e2e": "apps/cep-e2e"
+  }
+}
